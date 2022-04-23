@@ -1,11 +1,11 @@
-import Image from "next/image";
 import React from "react";
 import styles from "./styles.module.scss";
+import p from "prop-types";
 
-export const PostCardBig = ({ imageURL = false }) => {
+export const PostCardBig = ({ imageURL, featured }) => {
   return (
     <div className={styles.wrapper__post}>
-      {imageURL && <div className={styles.post__photo}></div>}
+      {featured && <div className={styles.post__photo}></div>}
 
       <div className={styles.post__details}>
         <span className={styles.tag}>CODE, GAMING</span>
@@ -31,4 +31,9 @@ export const PostCardBig = ({ imageURL = false }) => {
       </div>
     </div>
   );
+};
+
+PostCardBig.propTypes = {
+  imageURL: p.string,
+  featured: p.bool,
 };
