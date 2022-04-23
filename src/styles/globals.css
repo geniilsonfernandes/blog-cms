@@ -5,29 +5,48 @@
 }
 
 :root {
-  --color-plt-primary: 211;
-  --color-plt-secundary: 0;
-  --color-plt-secundary-saturation: 10;
+  --color-plt-primary: #007bfd;
 
-  --color-background-600: hsl(var(--color-plt-primary), 100%, 50%);
-  --color-background-500: hsl(var(--color-plt-primary), 100%, 60%);
-  --color-background-400: hsl(var(--color-plt-primary), 100%, 70%);
-  --color-background-300: hsl(var(--color-plt-primary), 100%, 80%);
-  --color-background-200: hsl(var(--color-plt-primary), 100%, 90%);
-  --color-background-100: hsl(var(--color-plt-primary), 100%, 98%);
+  --color-background-600: hsl(0, 0%, 0%);
+  --color-background-500: hsl(0, 0%, 5%);
+  --color-background-400: hsl(0, 0%, 10%);
+  --color-background-300: hsl(0, 0%, 15%);
+  --color-background-200: hsl(0, 0%, 20%);
+  --color-background-100: hsl(0, 0%, 25%);
 
-  --color-text-600: hsl(var(--color-plt-secundary), 0%, 20%);
-  --color-text-500: hsl(var(--color-plt-secundary), 0%, 60%);
-  --color-text-400: hsl(var(--color-plt-secundary), 0%, 70%);
-  --color-text-300: hsl(var(--color-plt-secundary), 0%, 80%);
-  --color-text-200: hsl(var(--color-plt-secundary), 0%, 98%);
-  --color-text-100: hsl(var(--color-plt-secundary), 0%, 98%);
+  --color-text-600: hsl(0, 0%, 20%);
+  --color-text-500: hsl(0, 0%, 60%);
+  --color-text-400: hsl(0, 0%, 70%);
+  --color-text-300: hsl(0, 0%, 80%);
+  --color-text-200: hsl(0, 0%, 98%);
+  --color-text-100: hsl(0, 0%, 98%);
 }
+
 html,
 body {
+  font-size: 62.5%;
   font-family: "Poppins", sans-serif;
+  background: var(--color-background-600);
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-100);
+}
 a {
   text-decoration: none;
+}
+button,
+input {
+  outline: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  background: transparent;
+  color: var(--color-text-100);
+}
+
+@media screen and (max-width: 768px) {
 }
