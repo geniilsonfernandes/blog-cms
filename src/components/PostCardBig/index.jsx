@@ -1,6 +1,6 @@
 import React from "react";
+import { UserDisplay } from "../UserDisplay";
 import styles from "./styles.module.scss";
-import p from "prop-types";
 
 export const PostCardBig = ({ imageURL, featured }) => {
   return (
@@ -14,10 +14,7 @@ export const PostCardBig = ({ imageURL, featured }) => {
           is to know
         </h2>
         <div className={styles.metadata}>
-          <div className={styles.user}>
-            <span>Genilson fernandes</span>
-          </div>
-
+          <UserDisplay user="Genilson fernandes" />
           <div className={styles.date}>
             <span>May, 17, 2022</span>
           </div>
@@ -31,9 +28,4 @@ export const PostCardBig = ({ imageURL, featured }) => {
       </div>
     </div>
   );
-};
-
-PostCardBig.propTypes = {
-  imageURL: p.string,
-  featured: p.bool,
 };

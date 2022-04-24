@@ -1,0 +1,31 @@
+.share {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--color-text-500);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .share__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border-radius: 4px;
+      height: 24px;
+      width: 24px;
+      transition: all ease-in-out 300ms;
+      cursor: pointer;
+      &:hover {
+        background: var(--color-background-200);
+      }
+    }
+  }
+}

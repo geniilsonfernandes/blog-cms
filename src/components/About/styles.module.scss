@@ -1,0 +1,25 @@
+.wrapper {
+  padding: 16px;
+}
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4.8rem;
+  color: var(--color-text-100);
+}
+.about {
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--color-text-500);
+}
+.author {
+  padding: 22px 0;
+}
+.share {
+  padding: 20px 0;
+  border-top: 1px solid var(--color-background-200);
+
+  display: flex;
+  align-items: center;
+}
