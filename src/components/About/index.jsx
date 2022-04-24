@@ -1,10 +1,7 @@
 import React from "react";
-import { FacebookIcon } from "../Icons/FacebookIcon";
-import { LinkeindIcon } from "../Icons/LinkeindIcon";
-import { TwitterIcon } from "../Icons/TwitterIcon";
+import styles from "./styles.module.scss";
 import { Share } from "../Share/Index";
 import { UserDisplay } from "../UserDisplay";
-import styles from "./styles.module.scss";
 
 export const About = () => {
   return (

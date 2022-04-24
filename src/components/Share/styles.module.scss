@@ -5,7 +5,7 @@
 
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 
   .share__icons {
     display: flex;
@@ -19,12 +19,19 @@
       justify-content: center;
       background: transparent;
       border-radius: 4px;
-      height: 24px;
-      width: 24px;
+      height: 20px;
+      width: 20px;
       transition: all ease-in-out 300ms;
       cursor: pointer;
       &:hover {
         background: var(--color-background-200);
+      }
+      svg path {
+        fill: var(--color-text-500);
+        transition: all ease-in-out 300ms;
+      }
+      &:hover svg path {
+        fill: var(--color-plt-primary);
       }
     }
   }
