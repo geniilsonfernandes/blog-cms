@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 
-:root {
+[data-theme="dark"]:root {
   --color-plt-primary: #007bfd;
+  --color-plt-primary-900: #00356e;
 
   --color-background-600: hsl(0, 0%, 0%);
   --color-background-500: hsl(0, 0%, 5%);
@@ -14,11 +15,12 @@
   --color-background-200: hsl(0, 0%, 20%);
   --color-background-100: hsl(0, 0%, 25%);
 
-  --color-text-600: hsl(0, 0%, 20%);
-  --color-text-500: hsl(0, 0%, 60%);
-  --color-text-400: hsl(0, 0%, 70%);
-  --color-text-300: hsl(0, 0%, 80%);
-  --color-text-200: hsl(0, 0%, 98%);
+  --color-text-700: hsl(0, 0%, 20%);
+  --color-text-600: hsl(0, 0%, 30%);
+  --color-text-500: hsl(0, 0%, 50%);
+  --color-text-400: hsl(0, 0%, 60%);
+  --color-text-300: hsl(0, 0%, 75%);
+  --color-text-200: hsl(0, 0%, 85%);
   --color-text-100: hsl(0, 0%, 98%);
 }
 
@@ -33,11 +35,15 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   color: var(--color-text-100);
 }
 a {
   text-decoration: none;
+}
+p {
+  font-size: 1.6rem;
 }
 button,
 input {

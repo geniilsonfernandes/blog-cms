@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html data-theme="dark">
         <Head>
           <link
             href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
