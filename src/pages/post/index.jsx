@@ -1,4 +1,5 @@
 import React from "react";
+import { Comments } from "../../components/Comments";
 import { DateIcon } from "../../components/Icons/DateIcon";
 import { Container } from "../../components/Layout/Container";
 import { Share } from "../../components/Share";
@@ -58,6 +59,7 @@ const Post = () => {
             Quisque consequat arcu eros, lobortis faucibus purus facilisis
             vitae. Nulla at nunc non purus vehicula elementum.
           </p>
+          <Comments />
         </main>
       </Container>
     </>
