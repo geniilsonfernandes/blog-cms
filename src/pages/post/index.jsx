@@ -10,7 +10,7 @@ const mock = {
   laoreet venenatis. Donec ultricies, metus vitae bibendum
   consequat, tortor neque euismod lectus`,
   title: "Remote Work is the Future, but Should You Go Remote?",
-  date: "May, 17, 2022.",
+  date: "May 17, 2022.",
   author: "Genilson fernandes",
 };
 
@@ -24,7 +24,7 @@ const Post = () => {
             <span className={styles.icon}>
               <DateIcon />
             </span>
-            {mock.date}
+            Published on: <span>{mock.date}</span>
           </span>
           <div className={styles.details}>
             <h1 className={styles.title}>{mock.title}</h1>
