@@ -1,7 +1,7 @@
 import React from "react";
 import { UserDisplay } from "../UserDisplay";
 import styles from "./styles.module.scss";
-
+import { DateIcon } from "../Icons/DateIcon";
 export const PostCardBig = ({ imageURL, featured }) => {
   return (
     <div className={styles.wrapper__post}>
@@ -16,7 +16,7 @@ export const PostCardBig = ({ imageURL, featured }) => {
         <div className={styles.metadata}>
           <UserDisplay user="Genilson fernandes" />
           <div className={styles.date}>
-            <span>May, 17, 2022</span>
+            <DateIcon /> <span> May, 17, 2022</span>
           </div>
         </div>
         <p className={styles.excerpet}>

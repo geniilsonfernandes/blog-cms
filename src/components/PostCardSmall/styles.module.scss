@@ -1,0 +1,26 @@
+.wrapper {
+  background: var(--color-background-300);
+  width: 100%;
+  padding: 24px;
+  .title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: var(--color-text-100);
+    max-width: 100%;
+    cursor: pointer;
+    transition: color, ease-in-out 100ms;
+
+    &:hover {
+      color: var(--color-plt-primary);
+      text-decoration: underline;
+    }
+  }
+  .date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.4rem;
+    color: var(--color-text-500);
+    padding-top: 18px;
+  }
+}
