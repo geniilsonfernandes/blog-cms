@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { Share } from "../Share/Index";
+import { Share } from "../Share/index";
 import { UserDisplay } from "../UserDisplay";
 
 export const About = () => {

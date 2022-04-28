@@ -5,6 +5,7 @@ import { Container } from "../../components/Layout/Container";
 import { Share } from "../../components/Share";
 import { UserDisplay } from "../../components/UserDisplay";
 import styles from "./styles.module.scss";
+
 const mock = {
   excerpt: `Orci varius natoque penatibus et magnis dis parturient montes,
   nascetur ridiculus mus. Etiam placerat tortor commodo lectus
@@ -15,7 +16,7 @@ const mock = {
   author: "Genilson fernandes",
 };
 
-const Post = () => {
+export default function Post() {
   return (
     <>
       <div className={styles.photo}></div>
@@ -64,6 +65,4 @@ const Post = () => {
       </Container>
     </>
   );
-};
-
-export default Post;
+}

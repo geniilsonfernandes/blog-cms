@@ -47,7 +47,8 @@ p {
   font-size: 1.6rem;
 }
 button,
-input {
+input,
+textarea {
   outline: none;
   border: none;
   font-family: "Poppins", sans-serif;
