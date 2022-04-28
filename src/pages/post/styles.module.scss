@@ -60,3 +60,17 @@
     color: var(--color-text-300);
   }
 }
+
+.posts {
+  h2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: var(--color-text-200);
+    margin-bottom: 18px;
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+  }
+}

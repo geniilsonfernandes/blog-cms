@@ -4,6 +4,7 @@ import { DateIcon } from "../../components/Icons/DateIcon";
 import { Container } from "../../components/Layout/Container";
 import { Share } from "../../components/Share";
 import { UserDisplay } from "../../components/UserDisplay";
+import { PostCardSmall } from "../../components/PostCardSmall";
 import styles from "./styles.module.scss";
 
 const mock = {
@@ -47,20 +48,18 @@ export default function Post() {
             urna. Suspendisse vel ex justo. Vivamus posuere porttitor ante eu
             hendrerit.
           </p>
-          <p>
-            In lacinia sapien a libero accumsan facilisis. Donec vitae lorem
-            massa. Aliquam tristique vehicula enim ut luctus. Vivamus gravida
-            dignissim ligula, dictum laoreet elit malesuada ac. Praesent est
-            justo, posuere a nisl porta, pharetra posuere lectus. Nulla velit
-            odio, tincidunt vel metus a, viverra placerat ligula.
-          </p>
-          <p>
-            Donec id nisl et risus volutpat tempor a eget mauris. Nullam velit
-            eros, porttitor et urna sit amet, ullamcorper vestibulum magna.
-            Quisque consequat arcu eros, lobortis faucibus purus facilisis
-            vitae. Nulla at nunc non purus vehicula elementum.
-          </p>
+
           <Comments />
+
+          <div className={styles.posts}>
+            <h2>Similar posts</h2>
+            <div className={styles.grid}>
+              <PostCardSmall title={mock.title} date={mock.date} />
+              <PostCardSmall title={mock.title} date={mock.date} />
+              <PostCardSmall title={mock.title} date={mock.date} />
+              <PostCardSmall title={mock.title} date={mock.date} />
+            </div>
+          </div>
         </main>
       </Container>
     </>
