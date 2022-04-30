@@ -84,8 +84,16 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
+  const raw = await fetch(`http://localhost:3333/posts`);
+  const json = await raw.json();
+  const paths = json.map((post) => {
+    return {
+      params: { id: String(post.id) },
+    };
+  });
+
   return {
-    paths: [],
-    fallback: true,
+    paths: paths,
+    fallback: false,
   };
 };
