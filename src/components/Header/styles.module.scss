@@ -1,3 +1,46 @@
 .header {
   padding: 56px;
+  display: flex;
+  justify-content: space-between;
+}
+.theme {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2.4rem;
+
+  color: var(--color-text-300);
+  input {
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+  }
+  label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+.toggle_bg {
+  display: flex;
+  border-radius: 16px;
+  width: 60px;
+  height: 32px;
+  background: var(--color-background-300);
+  position: relative;
+  cursor: pointer;
+  &::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: var(--color-text-300);
+    border-radius: 12px;
+    top: 4px;
+    position: absolute;
+    left: 4px;
+    transition: all ease-in-out 200ms;
+  }
+  &[data-toggle="true"]::after {
+    left: 33px;
+  }
 }

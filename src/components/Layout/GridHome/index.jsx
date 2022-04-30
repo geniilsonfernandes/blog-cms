@@ -12,7 +12,6 @@ export const GridHome = () => {
         <About />
       </div>
       <div className={styles.posts}>
-        <PostCardSmall />
         <PostCardBig featured={false} />
         <PostCardBig featured={false} />
         <PostCardBig featured={false} />
