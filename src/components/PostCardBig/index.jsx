@@ -2,29 +2,36 @@ import React from "react";
 import { UserDisplay } from "../UserDisplay";
 import styles from "./styles.module.scss";
 import { DateIcon } from "../Icons/DateIcon";
-export const PostCardBig = ({ imageURL, featured }) => {
+import Link from "next/link";
+export const PostCardBig = ({
+  imageURL,
+  featured,
+  tags,
+  title,
+  author,
+  date,
+  excerpt,
+  id,
+}) => {
   return (
     <div className={styles.wrapper__post}>
       {featured && <div className={styles.post__photo}></div>}
 
       <div className={styles.post__details}>
-        <span className={styles.tag}>CODE, GAMING</span>
-        <h2 className={styles.title}>
-          From its medieval origins to the digital era, learn everything there
-          is to know
-        </h2>
+        <span className={styles.tag}>{tags}</span>
+        <Link href={`post/${id}`} passHref>
+          <h2 className={styles.title}>{title}</h2>
+        </Link>
         <div className={styles.metadata}>
-          <UserDisplay user="Genilson fernandes" />
+          <UserDisplay user={author} />
           <div className={styles.date}>
-            <DateIcon /> <span> May, 17, 2022</span>
+            <DateIcon /> <span>{date}</span>
           </div>
         </div>
-        <p className={styles.excerpet}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut...
-        </p>
-        <button className={styles.button}> Read More </button>
+        <p className={styles.excerpt}>{excerpt}</p>
+        <Link href={`post/${id}`} passHref>
+          <button className={styles.button}> Read More </button>
+        </Link>
       </div>
     </div>
   );

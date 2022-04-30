@@ -1,0 +1,2 @@
+.main{display:-ms-grid;display:grid;-ms-grid-columns:(72px)[12];grid-template-columns:repeat(12, 72px);gap:24px}.bio{grid-column:span 5}.posts{grid-column:span 7;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;gap:16px}
+/*# sourceMappingURL=styles.module.css.map */

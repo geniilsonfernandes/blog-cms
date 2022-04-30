@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import { Logo } from "../Icons/Logo";
 import styles from "./styles.module.scss";
@@ -10,7 +11,11 @@ export const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.logo} onClick={() => handleChange()}>
-        <Logo />
+        <Link href="/">
+          <a>
+            <Logo />
+          </a>
+        </Link>
       </div>
       <div className={styles.theme}>
         <label htmlFor="theme">

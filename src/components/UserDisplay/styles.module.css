@@ -1,0 +1,2 @@
+.user{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:10px;font-size:1.4rem;color:var(--color-text-500)}.user .photo{display:-webkit-box;display:-ms-flexbox;display:flex;background:var(--color-background-100);height:24px;width:24px;border-radius:16px}@media screen and (max-width: 768px){.user{font-size:1.2rem}}
+/*# sourceMappingURL=styles.module.css.map */

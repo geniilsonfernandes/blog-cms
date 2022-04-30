@@ -6,6 +6,8 @@ import { Share } from "../../components/Share";
 import { UserDisplay } from "../../components/UserDisplay";
 import { PostCardSmall } from "../../components/PostCardSmall";
 import styles from "./styles.module.scss";
+import { string } from "prop-types";
+import { Router, useRouter } from "next/router";
 
 const mock = {
   excerpt: `Orci varius natoque penatibus et magnis dis parturient montes,
@@ -17,7 +19,12 @@ const mock = {
   author: "Genilson fernandes",
 };
 
-export default function Post() {
+export default function Post({ params, post }) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <p>Loading...</p>;
+  }
   return (
     <>
       <div className={styles.photo}></div>
@@ -30,7 +37,9 @@ export default function Post() {
             Published on: <span>{mock.date}</span>
           </span>
           <div className={styles.details}>
-            <h1 className={styles.title}>{mock.title}</h1>
+            <h1 className={styles.title}>
+              {post[0].title} {params.id}
+            </h1>
             <p className={styles.excerpt}>{mock.excerpt}</p>
             <div className={styles.author}>
               <UserDisplay user={mock.author} />
@@ -65,3 +74,18 @@ export default function Post() {
     </>
   );
 }
+
+export const getStaticProps = async ({ params }) => {
+  const raw = await fetch(`http://localhost:3333/posts?id=${params.id}`);
+  const json = await raw.json();
+  return {
+    props: { post: json, params: params }, // will be passed to the page component as props
+  };
+};
+
+export const getStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: true,
+  };
+};

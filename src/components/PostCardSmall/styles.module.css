@@ -1,0 +1,2 @@
+.wrapper{background:var(--color-background-300);width:100%;padding:24px}.wrapper .title{font-weight:600;font-size:1.8rem;color:var(--color-text-100);max-width:100%;cursor:pointer;-webkit-transition:color, ease-in-out 100ms;transition:color, ease-in-out 100ms}.wrapper .title:hover{color:var(--color-plt-primary);text-decoration:underline}.wrapper .date{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:8px;font-size:1.4rem;color:var(--color-text-500)}
+/*# sourceMappingURL=styles.module.css.map */

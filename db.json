@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "excerpt": "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam placerat tortor commodo lectus laoreet venenatis. Donec ultricies, metus vitae bibendum consequat, tortor neque euismod lectus",
+      "title": "post 1",
+      "date": "May 17, 2022.",
+      "author": "Genilson fernandes",
+      "id": 1,
+      "tags": "CODE, GAMING"
+    },
+    {
+      "excerpt": "Orci varius natoque penatibus et magnis dis parturient montes,nascetur ridiculus mus. Etiam placerat tortor commodo lectuslaoreet venenatis. Donec ultricies, metus vitae bibendum consequat, tortor neque euismod lectus",
+      "title": "post 2",
+      "date": "May 17, 2022.",
+      "author": "Genilson fernandes",
+      "id": 2,
+      "tags": "CODE, GAMING"
+    },
+    {
+      "excerpt": "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam placerat tortor commodo lectus laoreet venenatis. Donec ultricies, metus vitae bibendu consequat, tortor neque euismod lectus",
+      "title": "post 3",
+      "date": "May 17, 2022.",
+      "author": "Genilson fernandes",
+      "id": 3,
+      "tags": "CODE, GAMING"
+    },
+    {
+      "excerpt": "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam placerat tortor commodo lectus laoreet venenatis. Donec ultricies, metus vitae bibendum consequat, tortor neque euismod lectus",
+      "title": "post 4",
+      "date": "May 17, 2022.",
+      "author": "Genilson fernandes",
+      "id": 4,
+      "tags": "CODE, GAMING"
+    }
+  ]
+}
