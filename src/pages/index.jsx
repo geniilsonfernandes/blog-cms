@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { GridHome } from "../components/Layout/GridHome";
+import { getPosts } from "../services";
 
 export default function Index({ posts }) {
   return (
@@ -15,9 +16,9 @@ export default function Index({ posts }) {
 }
 
 export const getServerSideProps = async () => {
-  const raw = await fetch("http://localhost:3333/posts");
-  const json = await raw.json();
+  const posts = await getPosts();
+
   return {
-    props: { posts: json }, // will be passed to the page component as props
+    props: { posts }, // will be passed to the page component as props
   };
 };

@@ -2,7 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["www.grupoescolar.com"],
+    domains: ["media.graphassets.com"],
+  },
+  experimental: {
+    images: {
+      layoutRaw: true,
+    },
   },
 };
 

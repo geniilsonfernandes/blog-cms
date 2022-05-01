@@ -12,7 +12,7 @@ export const GridHome = ({ posts }) => {
       </div>
       <div className={styles.posts}>
         {posts.map((post) => (
-          <PostCardBig key={post.id} {...post} />
+          <PostCardBig key={post.slug} post={post} />
         ))}
       </div>
     </Container>
