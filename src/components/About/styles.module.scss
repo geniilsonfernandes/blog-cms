@@ -1,3 +1,14 @@
+.wrapper {
+  animation: intoUp ease-in-out forwards 300ms;
+  @keyframes intoUp {
+    0% {
+      transform: translate3d(0px, -20px, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
 .title {
   font-style: normal;
   font-weight: 600;

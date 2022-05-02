@@ -5,7 +5,7 @@ import { UserDisplay } from "../UserDisplay";
 
 export const About = () => {
   return (
-    <>
+    <div className={styles.wrapper}>
       <h1 className={styles.title}>HI, THIS IS MY BLOOG</h1>
       <p className={styles.about}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -18,6 +18,6 @@ export const About = () => {
       <div className={styles.share}>
         <Share />
       </div>
-    </>
+    </div>
   );
 };
