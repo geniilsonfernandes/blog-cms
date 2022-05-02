@@ -20,9 +20,11 @@ export default function Post({ post }) {
 
   return (
     <>
-      <div className={styles.photo}>
-        <img src={post.postCover.url} alt={post.slug} />
-      </div>
+      {post.cover && (
+        <div className={styles.photo}>
+          <img src={post.postCover.url} alt={post.slug} />
+        </div>
+      )}
       <Container>
         <div className={styles.wrapper}>
           <span className={styles.date}>
@@ -30,7 +32,7 @@ export default function Post({ post }) {
               <DateIcon />
             </span>
             Published on:
-            <span>{moment(post.createdAt).format("MMMM Do YYYY")}</span>
+            <span>{moment(post.createdAt).format("ll")}</span>
           </span>
           <div className={styles.details}>
             <h1 className={styles.title}>{post.title}</h1>

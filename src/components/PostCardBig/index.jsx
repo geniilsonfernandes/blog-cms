@@ -5,6 +5,7 @@ import { DateIcon } from "../Icons/DateIcon";
 import Link from "next/link";
 import Image from "next/image";
 import moment from "moment";
+import { Categories } from "../Categories";
 
 export const PostCardBig = ({ post }) => {
   return (
@@ -22,7 +23,9 @@ export const PostCardBig = ({ post }) => {
       )}
 
       <div className={styles.post__details}>
-        <span className={styles.tag}>contegories</span>
+        {post.categories.length > 0 && (
+          <Categories categories={post.categories} />
+        )}
         <Link href={`/post/${post.slug}`} passHref>
           <h2 className={styles.title}>{post.title}</h2>
         </Link>
@@ -30,7 +33,7 @@ export const PostCardBig = ({ post }) => {
           <UserDisplay user={post.authors[0].name} />
           <div className={styles.date}>
             <DateIcon />
-            <span>{moment(post.createdAt).format("MMMM Do YYYY")}</span>
+            <span>{moment(post.createdAt).format("ll")}</span>
           </div>
         </div>
         <p className={styles.excerpt}>{post.excerpt}</p>
