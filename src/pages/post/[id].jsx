@@ -4,7 +4,6 @@ import styles from "./styles.module.scss";
 import { Comments } from "../../components/Comments";
 import { DateIcon } from "../../components/Icons/DateIcon";
 import { Container } from "../../components/Layout/Container";
-import { Share } from "../../components/Share";
 import { UserDisplay } from "../../components/UserDisplay";
 import { PostCardSmall } from "../../components/PostCardSmall";
 import { useRouter } from "next/router";
@@ -38,7 +37,6 @@ export default function Post({ post }) {
             <p className={styles.excerpt}>{post.excerpt}</p>
             <div className={styles.author}>
               <UserDisplay user={post.authors[0].name} />
-              <Share />
             </div>
           </div>
         </div>
