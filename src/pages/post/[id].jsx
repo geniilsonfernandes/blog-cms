@@ -44,7 +44,6 @@ export default function Post({ post }) {
         </div>
         <main className={styles.main}>
           {parse(post.content.html)}
-          <Comments />
 
           <div className={styles.posts}>
             <h2>Similar posts</h2>
