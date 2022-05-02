@@ -9,9 +9,6 @@ export const Comments = () => {
       <h2 className={styles.head}>3 Comments</h2>
       <Comment />
       <Comment />
-      <Comment />
-      <Comment />
-      <Comment />
       <Form />
     </div>
   );

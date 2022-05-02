@@ -5,6 +5,7 @@ import { Container } from "../Container";
 import styles from "./styles.module.scss";
 
 export const GridHome = ({ posts }) => {
+  console.log(posts);
   return (
     <Container wrapper="main" className={styles.main}>
       <div className={styles.sidebar}>
