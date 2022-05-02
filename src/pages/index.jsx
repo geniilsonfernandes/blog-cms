@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import { GridHome } from "../components/Layout/GridHome";
 import { getPosts } from "../services";
 
@@ -17,7 +18,6 @@ export default function Index({ posts }) {
 
 export const getServerSideProps = async () => {
   const posts = await getPosts();
-
   return {
     props: { posts }, // will be passed to the page component as props
   };

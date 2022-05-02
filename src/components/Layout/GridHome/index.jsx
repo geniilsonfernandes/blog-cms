@@ -7,13 +7,13 @@ import styles from "./styles.module.scss";
 export const GridHome = ({ posts }) => {
   return (
     <Container wrapper="main" className={styles.main}>
-      <div className={styles.bio}>
+      <div className={styles.sidebar}>
         <About />
       </div>
       <div className={styles.posts}>
-        {posts.map((post) => (
-          <PostCardBig key={post.slug} post={post} />
-        ))}
+        {!posts && <span className={styles.alert}>No have post</span>}
+        {posts &&
+          posts.map((post) => <PostCardBig key={post.slug} post={post} />)}
       </div>
     </Container>
   );

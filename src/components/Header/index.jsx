@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Logo } from "../Icons/Logo";
+import { Container } from "../Layout/Container";
 import styles from "./styles.module.scss";
 export const Header = () => {
   const [checked, setChecked] = useState();
@@ -10,20 +11,22 @@ export const Header = () => {
 
   return (
     <div className={styles.header}>
-      <div className={styles.logo} onClick={() => handleChange()}>
-        <Link href="/">
-          <a>
-            <Logo />
-          </a>
-        </Link>
-      </div>
-      <div className={styles.theme}>
-        <label htmlFor="theme">
-          Mindnight:
-          <span className={styles.toggle_bg} data-toggle={checked}></span>
-        </label>
-        <input type="checkbox" name="theme" id="theme" checked={checked} />
-      </div>
+      <Container className={styles.wrapper}>
+        <div className={styles.logo} onClick={() => handleChange()}>
+          <Link href="/">
+            <a>
+              <Logo />
+            </a>
+          </Link>
+        </div>
+        <div className={styles.theme}>
+          <label htmlFor="theme">
+            Mindnight:
+            <span className={styles.toggle_bg} data-toggle={checked}></span>
+          </label>
+          <input type="checkbox" name="theme" id="theme" checked={checked} />
+        </div>
+      </Container>
     </div>
   );
 };
