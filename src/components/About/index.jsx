@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { Share } from "../Share/index";
 import { UserDisplay } from "../UserDisplay";
 
 export const About = () => {
@@ -14,9 +13,6 @@ export const About = () => {
       </p>
       <div className={styles.author}>
         <UserDisplay user="Genilson Fernandes" />
-      </div>
-      <div className={styles.share}>
-        <Share />
       </div>
     </div>
   );
