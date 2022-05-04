@@ -58,7 +58,7 @@
     align-items: center;
     gap: 16px;
     font-size: 1.4rem;
-    color: var(--color-text-500);
+    color: var(--color-text-300);
     padding-top: 10px;
 
     .date {
@@ -76,7 +76,7 @@
   .excerpt {
     font-weight: 400;
     font-size: 1.4rem;
-    color: var(--color-text-500);
+    color: var(--color-text-300);
 
     padding: 10px 0 20px 0;
     @media screen and (max-width: 768px) {

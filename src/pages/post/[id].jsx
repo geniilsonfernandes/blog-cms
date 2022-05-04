@@ -1,18 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styles from "./styles.module.scss";
-import { Comments } from "../../components/Comments";
 import { DateIcon } from "../../components/Icons/DateIcon";
 import { Container } from "../../components/Layout/Container";
 import { UserDisplay } from "../../components/UserDisplay";
 import { PostCardSmall } from "../../components/PostCardSmall";
 import { useRouter } from "next/router";
-import { getPost, getPosts } from "../../services";
+import { getPost, getPosts, getSimilarPosts } from "../../services";
 import parse from "html-react-parser";
 import moment from "moment";
+import { Seo } from "../../components/Seo";
 
-export default function Post({ post }) {
+export default function Post({ post, similarPosts }) {
   const router = useRouter();
+
+  console.log(post);
 
   if (router.isFallback) {
     return <p>Loading...</p>;
@@ -20,6 +22,7 @@ export default function Post({ post }) {
 
   return (
     <>
+      <Seo title={post.title} />
       {post.cover && (
         <div className={styles.photo}>
           <img src={post.postCover.url} alt={post.slug} />
@@ -38,7 +41,10 @@ export default function Post({ post }) {
             <h1 className={styles.title}>{post.title}</h1>
             <p className={styles.excerpt}>{post.excerpt}</p>
             <div className={styles.author}>
-              <UserDisplay user={post.authors[0].name} />
+              <UserDisplay
+                user={post.authors[0].name}
+                photoUrl={post.authors[0].photo.url}
+              />
             </div>
           </div>
         </div>
@@ -48,7 +54,9 @@ export default function Post({ post }) {
           <div className={styles.posts}>
             <h2>Similar posts</h2>
             <div className={styles.grid}>
-              <PostCardSmall />
+              {similarPosts.map((post) => (
+                <PostCardSmall key={post.slug} post={post} />
+              ))}
             </div>
           </div>
         </main>
@@ -60,8 +68,14 @@ export default function Post({ post }) {
 export const getStaticProps = async ({ params }) => {
   const raw = await getPost(params.id);
 
+  let similarPosts = [];
+
+  if (raw.categories.length > 0) {
+    similarPosts = await getSimilarPosts(raw.categories[0].slug);
+  }
+
   return {
-    props: { post: raw },
+    props: { post: raw, similarPosts: similarPosts || [] },
   };
 };
 

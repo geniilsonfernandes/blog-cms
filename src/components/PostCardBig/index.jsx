@@ -30,7 +30,10 @@ export const PostCardBig = ({ post }) => {
           <h2 className={styles.title}>{post.title}</h2>
         </Link>
         <div className={styles.metadata}>
-          <UserDisplay user={post.authors[0].name} />
+          <UserDisplay
+            user={post.authors[0].name}
+            photoUrl={post.authors[0].photo.url}
+          />
           <div className={styles.date}>
             <DateIcon />
             <span>{moment(post.createdAt).format("ll")}</span>

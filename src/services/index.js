@@ -4,7 +4,7 @@ const graphqlAPI = process.env.NEXT_PUBLICK_GRAPHCMS;
 
 export const getPosts = async () => {
   const query = gql`
-    query MyQuery {
+    query getPosts {
       posts {
         id
         title
@@ -16,6 +16,9 @@ export const getPosts = async () => {
         createdAt
         authors {
           name
+          photo {
+            url
+          }
         }
         cover
         categories {
@@ -44,10 +47,60 @@ export const getPost = async (slug) => {
         excerpt
         authors {
           name
+          photo {
+            url
+          }
         }
+        categories {
+          slug
+        }
+        cover
       }
     }
   `;
   const results = await request(graphqlAPI, query, { slug });
   return results.post;
+};
+
+export const getAuthor = async () => {
+  const query = gql`
+    query author {
+      authors {
+        name
+        bio
+        photo {
+          url
+        }
+      }
+    }
+  `;
+  const results = await request(graphqlAPI, query);
+  return results.authors;
+};
+
+export const getSimilarPosts = async (slug) => {
+  const query = gql`
+    query getSimilarPosts($slug: String!) {
+      categoriesConnection(where: { slug: $slug }) {
+        edges {
+          node {
+            id
+            posts {
+              id
+              slug
+              createdAt
+              title
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const results = await request(graphqlAPI, query, { slug });
+  if (results.categoriesConnection.edges.length > 0) {
+    return results.categoriesConnection.edges[0].node.posts;
+  } else {
+    return [];
+  }
 };

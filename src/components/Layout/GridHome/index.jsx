@@ -4,12 +4,11 @@ import { PostCardBig } from "../../PostCardBig";
 import { Container } from "../Container";
 import styles from "./styles.module.scss";
 
-export const GridHome = ({ posts }) => {
-  console.log(posts);
+export const GridHome = ({ posts, author }) => {
   return (
     <Container wrapper="main" className={styles.main}>
       <div className={styles.sidebar}>
-        <About />
+        <About author={author} />
       </div>
       <div className={styles.posts}>
         {!posts && <span className={styles.alert}>No have post</span>}

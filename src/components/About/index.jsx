@@ -2,17 +2,13 @@ import React from "react";
 import styles from "./styles.module.scss";
 import { UserDisplay } from "../UserDisplay";
 
-export const About = () => {
+export const About = ({ author }) => {
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.title}>HI, THIS IS MY BLOOG</h1>
-      <p className={styles.about}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut...
-      </p>
+      <h1 className={styles.title}>Hi, this is my blog</h1>
+      <p className={styles.about}>{author.bio}</p>
       <div className={styles.author}>
-        <UserDisplay user="Genilson Fernandes" />
+        <UserDisplay user={author.name} photoUrl={author.photo.url} />
       </div>
     </div>
   );

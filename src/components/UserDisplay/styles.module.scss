@@ -8,9 +8,10 @@
     height: 24px;
     width: 24px;
     border-radius: 16px;
+    overflow: hidden;
   }
   font-size: 1.4rem;
-  color: var(--color-text-500);
+  color: var(--color-text-300);
   @media screen and (max-width: 768px) {
     font-size: 1.2rem;
   }

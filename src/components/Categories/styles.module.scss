@@ -3,12 +3,20 @@
   list-style: none;
   font-weight: 500;
   font-size: 1.2rem;
-  gap: 10px;
   text-transform: uppercase;
   color: var(--color-plt-primary);
 
   margin-top: 4px;
   @media screen and (max-width: 768px) {
     font-size: 1rem;
+  }
+  li {
+    padding-right: 8px;
+  }
+  li:not(:last-child) {
+    border-right: 1px solid var(--color-plt-primary);
+  }
+  li:not(:first-child) {
+    padding-left: 8px;
   }
 }
