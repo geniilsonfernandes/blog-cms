@@ -19,13 +19,6 @@ export const Header = () => {
             </a>
           </Link>
         </div>
-        <div className={styles.theme}>
-          <label htmlFor="theme">
-            Mindnight:
-            <span className={styles.toggle_bg} data-toggle={checked}></span>
-          </label>
-          <input type="checkbox" name="theme" id="theme" checked={checked} />
-        </div>
       </Container>
     </div>
   );
