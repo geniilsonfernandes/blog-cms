@@ -14,8 +14,6 @@ import { Seo } from "../../components/Seo";
 export default function Post({ post, similarPosts }) {
   const router = useRouter();
 
-  console.log(post);
-
   if (router.isFallback) {
     return <p>Loading...</p>;
   }
@@ -90,6 +88,6 @@ export const getStaticPaths = async () => {
 
   return {
     paths: paths,
-    fallback: false,
+    fallback: true,
   };
 };
